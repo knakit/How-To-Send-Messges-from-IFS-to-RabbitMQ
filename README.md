@@ -32,7 +32,7 @@ Body:
 ```
 * Login to IFS EE client with Administrator account
 * Routing Addresses, Create New
-``
+```
 Destination Type:  Http
 Http Sender:       HTTP_SENDER1
 URL:               http://wq-nb-dsj:15672/api/exchanges/%2F/my_queue/publish
