@@ -22,6 +22,7 @@ URL: http://localhost:15672/api/exchanges/%2F/my_queue
 Body:
 {"type":"direct","auto_delete":false,"durable":true,"internal":false,"arguments":{}}
 ```
+
 <br>
 * Bind queue to exchange
 ```
