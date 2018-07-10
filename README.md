@@ -23,7 +23,6 @@ Body:
 {"type":"direct","auto_delete":false,"durable":true,"internal":false,"arguments":{}}
 ```
 
-<br>
 * Bind queue to exchange
 ```
 Type: POST
