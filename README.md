@@ -30,8 +30,10 @@ URL: http://localhost:15672/api/bindings/%2F/e/my_queue/q/ifs_queue
 Body:
 {"routing_key": "ifs_queue","arguments": {},}
 ```
+
 * Login to IFS EE client with Administrator account
 * Routing Addresses, Create New
+
 ```
 Destination Type:  Http
 Http Sender:       HTTP_SENDER1
@@ -40,6 +42,7 @@ Login:             RabbitMQ Username
 Password:          RabbitMQ user password
 ```
 <br>
+
 Sample message
 ```
 {
@@ -51,6 +54,7 @@ Sample message
     "payload_encoding": "string"
 }
 ```
+
 
 ***According to the RabbitMQ doc, HTTP API is not ideal for high performance publishing; the need to create a new TCP connection for each message published can limit message throughput compared to AMQP or other protocols using long-lived connections. Therefore it's not recommend to use in Porduction Systems
   
