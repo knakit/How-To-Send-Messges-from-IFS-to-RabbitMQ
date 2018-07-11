@@ -7,7 +7,7 @@ Due to this and my lazyness, creation of a RabbitMQ Sender was put on hold and s
   *** I just read the documentation once and implemented this by myself. Would like to know any expert comments or alternate implemetations if you have done this.
 
 ### Prerequisites
-* <a href="https://www.getpostman.com/apps">PostMan</a> or Curl
+* <a href="https://www.getpostman.com/apps">PostMan</a> or <a href="https://curl.haxx.se">Curl</a>
 * Administrative privileges for IFS Solution Manager
 
 ### Setup
