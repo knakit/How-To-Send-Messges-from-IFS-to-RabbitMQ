@@ -7,7 +7,7 @@ Due to this and my lazyness, creation of a RabbitMQ Sender was put on hold and s
   *** I just read the documentation once and implemented this by myself. Would like to know any expert comments or alternate implemetations if you have done this.
 
 ### Prerequisites
-* <a href="https://www.getpostman.com/apps">PostMan</a>
+* <a href="https://www.getpostman.com/apps">PostMan</a> or Curl
 * Administrative privileges for IFS Solution Manager
 
 ### Setup
@@ -18,7 +18,7 @@ Due to this and my lazyness, creation of a RabbitMQ Sender was put on hold and s
 * Create a new exchange
 ```
 Type: PUT
-URL: http://localhost:15672/api/exchanges/%2F/my_queue
+URL: http://<RABBITMQ_SERVER>:15672/api/exchanges/%2F/my_queue
 Body:
 {"type":"direct","auto_delete":false,"durable":true,"internal":false,"arguments":{}}
 ```
@@ -26,7 +26,7 @@ Body:
 * Bind queue to exchange
 ```
 Type: POST
-URL: http://localhost:15672/api/bindings/%2F/e/my_queue/q/ifs_queue
+URL: http://<RABBITMQ_SERVER>:15672/api/bindings/%2F/e/my_queue/q/ifs_queue
 Body:
 {"routing_key": "ifs_queue","arguments": {},}
 ```
@@ -37,7 +37,7 @@ Body:
 ```
 Destination Type:  Http
 Http Sender:       HTTP_SENDER1
-URL:               http://wq-nb-dsj:15672/api/exchanges/%2F/my_queue/publish
+URL:               http://<RABBITMQ_SERVER>:15672/api/exchanges/%2F/my_queue/publish
 Login:             RabbitMQ Username
 Password:          RabbitMQ user password
 ```
