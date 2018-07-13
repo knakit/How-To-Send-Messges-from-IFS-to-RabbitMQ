@@ -1,4 +1,4 @@
-# Sending files from IFS<sup>®</sup> to RabbitMQ
+# Sending messages from IFS<sup>®</sup> to RabbitMQ
 
 My intention was to create an AMQP based RabbitMQ sender which can be deployed in IFS Connector Senders. But after reading about <a href="https://rawcdn.githack.com/rabbitmq/rabbitmq-management/v3.7.7/priv/www/api/index.html"> RabbitMQ Management HTTP API</a>, I decided to implement that using existing IFS HTTP Sender and it worked like a charm :)
 <br>
